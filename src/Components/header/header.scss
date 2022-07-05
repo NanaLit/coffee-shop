@@ -1,3 +1,23 @@
-li {
-    color: red;
+.header {
+    margin-left: 9.375rem;
+    display: flex;
+    position: relative;
+    .logo {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: -24px;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+        margin-top: 15px;
+    }
+    &__item {
+        margin-right: 2.5rem;
+    }
 }

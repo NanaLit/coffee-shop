@@ -3,16 +3,16 @@ import logo from './logo.png';
 
 function Header () {
     return (
-        <header>
-            <img src={logo} alt="logo" />
-            <ul>
-                <li>
+        <header className="header">
+            <img className="logo" src={logo} alt="logo" />
+            <ul className="header__list">
+                <li className="header__item">
                     Coffee house
                 </li>
-                <li>
+                <li className="header__item">
                     Our coffee
                 </li>
-                <li>
+                <li className="header__item">
                     For your pleasure
                 </li>
             </ul>

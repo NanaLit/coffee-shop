@@ -1,0 +1,11 @@
+.divider {
+    margin: 1.25rem auto 0;
+    &__band {
+        width: 60px;
+        height: 1px;
+        background-color: #fff;
+        &_black {
+            background-color: #000;
+        }
+    }
+}

@@ -1,9 +1,11 @@
 import './App.scss'
-import Header from '../header/header';
+import PromoHome from '../promo-home/promo-home';
 
 function App () {
     return (
-        <Header/>
+        <div className="app">
+            <PromoHome/>
+        </div>
     );
 }
 
