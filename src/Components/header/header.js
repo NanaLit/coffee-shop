@@ -7,13 +7,13 @@ function Header () {
             <img className="logo" src={logo} alt="logo" />
             <ul className="header__list">
                 <li className="header__item">
-                    Coffee house
+                    <a href="#">Coffee house</a>
                 </li>
                 <li className="header__item">
-                    Our coffee
+                    <a href="#">Our coffee</a>
                 </li>
                 <li className="header__item">
-                    For your pleasure
+                    <a href="#">For your pleasure</a>
                 </li>
             </ul>
         </header>

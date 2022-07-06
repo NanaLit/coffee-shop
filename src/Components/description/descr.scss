@@ -1,0 +1,10 @@
+.descr {
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin: 0.875rem auto 0;
+    line-height: 1.25rem;
+    max-width: 41.75rem;
+    &_center {
+        text-align: center;
+    }
+}
