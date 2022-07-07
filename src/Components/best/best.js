@@ -2,15 +2,28 @@ import './best.scss';
 import HeaderH2 from '../h2/h2';
 import Card from '../card/card';
 
-function OurBest () {
+const OurBest = ({data}) => {
+
+    const elements = data.map(item => {
+        const {id, ...itemProps} = item;
+        return (
+            <Card middle={true} key={id} {...itemProps}/>
+        )
+    });
+    
+    
     return (
         <section className="best">
             <div className="container">
                 <HeaderH2 text={"Our best"} weight={true}/>
-                <Card/>
+                <ul className="best__list">
+                    {elements}
+                </ul>
             </div>
-        </section>
+            
+        </section> 
     )
+    
 }
 
 export default OurBest;

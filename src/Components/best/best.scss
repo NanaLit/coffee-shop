@@ -2,4 +2,10 @@
     min-height: auto;
     padding: 2.8125rem 0 6.875rem;
     background: url('./paper.jpg') center (center/cover) no-repeat;
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+    }
 }

@@ -2,25 +2,4 @@
     margin-left: 9.375rem;
     display: flex;
     position: relative;
-    .logo {
-        width: 35px;
-        height: 35px;
-        position: absolute;
-        left: -24px;
-    }
-    &__list {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        font-weight: 400;
-        font-size: 0.75rem;
-        margin-top: 15px;
-    }
-    &__item {
-        margin-right: 2.5rem;
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-    }
 }
