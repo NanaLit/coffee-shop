@@ -1,4 +1,5 @@
 .hat {
+    position: relative;
     .logo {
         width: 35px;
         height: 35px;
@@ -19,6 +20,12 @@
         a {
             text-decoration: none;
             color: #fff;
+        }
+        &_black {
+            margin-bottom: 0.625rem;
+            a {
+                color: #000;
+            }
         }
     }
 }
