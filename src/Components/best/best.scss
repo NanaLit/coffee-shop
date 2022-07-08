@@ -1,11 +1,18 @@
 .best {
     min-height: auto;
-    padding: 2.8125rem 0 6.875rem;
+    padding: 2.8125rem 0 5.375rem;
     background: url('./paper.jpg') center (center/cover) no-repeat;
     &__list {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin-top: 2.5rem;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 75em) {
+    .best {
+        padding: 1.8125rem 0 3.375rem;
     }
 }

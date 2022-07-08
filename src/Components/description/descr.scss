@@ -8,3 +8,9 @@
         text-align: center;
     }
 }
+
+@media (max-width: 48em) {
+    .descr {
+        font-size: 0.75rem;
+    }
+}

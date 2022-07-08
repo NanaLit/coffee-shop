@@ -5,3 +5,9 @@
 .text {
     padding-top: 1.25rem;
 }
+
+@media (max-width: 75em) {
+    .about {
+        padding: 1.8125rem 0 4.25rem;
+    }
+}

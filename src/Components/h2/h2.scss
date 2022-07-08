@@ -11,3 +11,27 @@
         color: #000;
     }
 }
+
+@media (max-width: 75em) {
+    .subheader {
+        font-size: 1.25rem;
+        margin: 1.6875rem auto 0;
+        max-width: 27.125rem;
+    }
+}
+
+@media (max-width: 62em) {
+    .subheader {
+        margin: 1.2875rem auto 0;
+    }
+}
+
+@media (max-width: 36em) {
+    .subheader {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.875rem;
+        max-width: 24.125rem;
+        margin: 1.875rem auto 0;
+    }
+}

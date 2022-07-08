@@ -2,3 +2,9 @@
     margin-left: 9.375rem;
     display: flex;
 }
+
+@media (max-width: 36em) {
+    .header{
+        margin-left: 2rem;
+    }
+}

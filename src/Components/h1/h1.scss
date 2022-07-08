@@ -6,3 +6,31 @@
     margin: 6.875rem auto 0;
     text-align: center;
 }
+
+@media (max-width: 75em) {
+    .promo-header {
+        font-size: 2.2rem;
+        margin: 4.275rem auto 0;
+    }
+}
+
+@media (max-width: 62em) {
+    .promo-header {
+        font-size: 2rem;
+        margin: 2.275rem auto 0;
+    }
+}
+
+@media (max-width: 48em) {
+    .promo-header {
+        font-size: 1.7rem;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 36em) {
+    .promo-header {
+        font-size: 1.5rem;
+        line-height: 2.225rem;
+    }
+}
