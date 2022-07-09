@@ -3,6 +3,18 @@
     display: flex;
 }
 
+@media (max-width: 75em) {
+    .header {
+        margin-left: 5.375rem;
+    }
+}
+
+@media (max-width: 62em) {
+    .header {
+        margin-left: 3.375rem;
+    }
+}
+
 @media (max-width: 36em) {
     .header{
         margin-left: 2rem;

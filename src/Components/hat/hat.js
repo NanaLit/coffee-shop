@@ -7,35 +7,15 @@ function Hat({footer}) {
     let img = logo;
     let clazz = "hat__item";
     let header = "header_none";
-    let hamburger = "hamburger hamburger_none";
-    let hatBlock = "hat__block hat__block_none"
+    let hatList = "hat__list";
 
-    footer ? ((img = logoBlack) && (clazz = "hat__item hat__item_black") && (header = "") && (hamburger = "hamburger hamburger_none") && (hatBlock = "hat__block hat__block_none")) : ((img = logo) && (clazz = "hat__item") && (header = "header_none") && (hamburger = "hamburger") && (hatBlock = "hat__block"));
+    footer ? ((img = logoBlack) && (clazz = "hat__item hat__item_black") && (header = "") && (hatList = "hat__list")) : ((img = logo) && (clazz = "hat__item") && (header = "header_none") && ((hatList = "hat__list hat__list_none")));
 
     return (
         <div className="hat">
-            <div className={hatBlock}>
-                <nav>
-                    <a href="#"><img className="logo" src={img} alt="logo" /></a>
-                    <ul className="hat__list">
-                        <li className={clazz}>
-                            <a href="#">Coffee house</a>
-                        </li>
-                        <li className={clazz}>
-                            <a href="#">Our coffee</a>
-                        </li>
-                        <li className={clazz}>
-                            <a href="#">For your pleasure</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div className={hamburger}>
-                <a href="#"><img className="hamburger__logo" src={img} alt="logo" /></a>
-            </div>
             <nav className={header}>
-                <a href="#"><img className="logo" src={img} alt="logo" /></a>
-                <ul className="hat__list">
+                <a href="#" onClick={this.openMenu}><img className="logo" src={img} alt="logo" /></a>
+                <ul className={hatList}>
                     <li className={clazz}>
                         <a href="#">Coffee house</a>
                     </li>
