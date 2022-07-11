@@ -1,0 +1,17 @@
+.picture {
+    padding-top: 4.375rem;
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 44rem;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 355px;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__img {
+        height: 100%;
+        width: auto;
+    }
+}
