@@ -8,10 +8,14 @@
     }
     &__input {
         font-size: 12px;
+        color:rgba(0, 0, 0, .5);
         width: 180px;
         height: 30px;
         text-align: center;
         margin-left: 19px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, .25);
     }
     &__text {
         font-size: 12px;
