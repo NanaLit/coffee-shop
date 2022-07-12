@@ -6,6 +6,7 @@
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         grid-template-rows: 355px;
+        grid-auto-rows: 355px;
         gap: 1rem;
         align-items: center;
         justify-content: space-around;
@@ -13,5 +14,17 @@
     &__img {
         height: 100%;
         width: auto;
+    }
+}
+
+@media (max-width: 36em) {
+    .picture {
+        padding-top: 2.25rem;
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__img {
+            margin: 0 auto;
+        }
     }
 }
