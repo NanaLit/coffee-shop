@@ -10,10 +10,13 @@
     align-items: center;
     justify-self: center;
     cursor: pointer;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .25);
+    &_big {
+        height: 260px;;
+    }
     &:hover {
-        //transform: scale(1.05);
-        //filter: contrast(150%);
-        box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .25);
+        transform: scale(1.05);
+        filter: contrast(150%);
     }
     .price {
         align-self: flex-end;
@@ -24,5 +27,15 @@
     &__img {
         width: 150px;
         height: auto;
+    }
+    .country {
+        display: none;
+        align-self: flex-end;
+        margin: 10px 0 0;
+        font-weight: 400;
+        font-size: 0.875rem;
+        &_veu {
+            display: block;
+        }
     }
 }

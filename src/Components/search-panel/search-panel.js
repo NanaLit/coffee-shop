@@ -1,17 +1,19 @@
 import './search-panel.scss';
 import Button from '../button/button';
 
-function SeachPanel () {
+const SeachPanel = (props) => {
 
     const buttonsData = [
-        {text: "Brasil", color: true, left: true, right: false},
-        {text: "Kenya", color: true, left: false, right: false},
-        {text: "Columbia", color: true, left: false, right: true},
+        {text: "Brasil", color: true, left: true, right: false, id: 1},
+        {text: "Kenya", color: true, left: false, right: false, id: 2},
+        {text: "Columbia", color: true, left: false, right: true, id: 3},
     ];
 
-    const buttons = buttonsData.map(item => {
+    const buttons = buttonsData.map((item, i) => {
         return (
-            <Button {...item}/>
+            <div key={i}>
+                <Button {...item}/>
+            </div>
         )
     });
 

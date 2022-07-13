@@ -1,6 +1,6 @@
 import './button.scss';
 
-function Button ({text, color, right, left}) {
+function Button ({text, color, right, left, id}) {
 
     let clazz = "btn"
     if (color) {
@@ -16,7 +16,8 @@ function Button ({text, color, right, left}) {
     }
 
     return (
-        <button className={clazz}>
+        <button className={clazz}
+            type="button">
             {text}
         </button>
     )

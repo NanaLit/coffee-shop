@@ -28,3 +28,21 @@
         gap: 5px;
     }
 }
+
+@media (max-width: 48em) {
+    .searchpanel {
+        padding: 1.5rem 0.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center
+    }
+}
+
+@media (max-width: 36em) {
+    .searchpanel {
+        &__wrapper {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+}
