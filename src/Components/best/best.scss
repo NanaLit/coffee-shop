@@ -4,7 +4,7 @@
     background: url('./paper.jpg') center (center/cover) no-repeat;
     &__list {
         display: grid;
-        grid-template: repeat(2, 240px) / repeat(3, 1fr);
+        grid-template: 240px / repeat(3, 1fr);
         grid-auto-rows: 240px;
         gap: 2rem;
         align-items: center;

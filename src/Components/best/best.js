@@ -4,7 +4,9 @@ import Card from '../card/card';
 
 const OurBest = ({data}) => {
 
-    const elements = data.map(item => {
+    const dataBest = data.filter(item => item.best);
+
+    const elements = dataBest.map(item => {
         const {id, ...itemProps} = item;
         return (
             <Card middle={true} key={id} {...itemProps}/>

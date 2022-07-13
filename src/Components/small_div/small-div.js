@@ -2,9 +2,7 @@ import './small-div.scss';
 
 function SmallDivider () {
     return (
-        <div className="small">
-
-        </div>
+        <div className="small"></div>
     )
 }
 
