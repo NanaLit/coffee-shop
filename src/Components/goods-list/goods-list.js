@@ -2,7 +2,7 @@ import './goods-list.scss';
 
 import Card from '../card/card';
 
-function GoodsList ({data, filter}) {
+function GoodsList ({data}) {
 
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
