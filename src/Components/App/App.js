@@ -12,7 +12,7 @@ class App extends Component {
         super(props);
         this.state = {
             data: [
-                {text: "Solimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 1, best: false, country: "Brasil"},
+                {text: "Colimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 1, best: false, country: "Brasil"},
                 {text: "Presto Coffee Beans 1 kg", img: 'photo2.png', price: 15.99, id: 2, best: true, country: "Keniya"},
                 {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 3, best: true, country: "Columbia"},
                 {text: "Solimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 4, best: false, country: "Brasil"},
@@ -20,7 +20,7 @@ class App extends Component {
                 {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 6, best: false, country: "Columbia"},
             ],
             term: '',
-            filter: 'all'
+            filter: ''
         }
     }
 
@@ -38,15 +38,34 @@ class App extends Component {
         this.setState({term});
     }
 
+    filterGoods = (items, filter) => {
+        switch (filter) {
+            case 'Brasil':
+                return items.filter(item => item.country === "Brasil");
+            case 'Keniya':
+                return items.filter(item => item.country === "Keniya");
+            case 'Columbia':
+                return items.filter(item => item.country === "Columbia")
+            default:
+                return items
+        }
+    }
+
+    onFilterSelect = (filter) => {
+        this.setState({filter});
+    }
+
     render () {
-        const {data, term} = this.state
-        const visibleData = this.searchGoods(data, term)
+        const {data, term, filter} = this.state
+        const visibleData = this.filterGoods(this.searchGoods(data, term), filter)
         return (
             <div className="app">
                 <HomePage data={data}/>
                 <OurCoffe 
                     data={visibleData}
-                    onUpdateSearch={this.onUpdateSearch}/>
+                    onUpdateSearch={this.onUpdateSearch}
+                    filter={filter}
+                    onFilterSelect={this.onFilterSelect}/>
             </div>
         )
     }

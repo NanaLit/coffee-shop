@@ -9,14 +9,16 @@ import Footer from '../footer/footer';
 class OurCoffe extends Component {
 
     render() {
-        const{data} = this.props;
+        const{data, onUpdateSearch, filter, onFilterSelect} = this.props;
         return (
             <div className="our">
                 <PromoCoffee/>
                 <AboutPic beans={true}/>
                 <FilterGoods 
                     data={data}
-                    onUpdateSearch={this.props.onUpdateSearch}/>
+                    onUpdateSearch={onUpdateSearch}
+                    filter={filter}
+                    onFilterSelect={onFilterSelect}/>
                 <Footer/>
             </div>
         )

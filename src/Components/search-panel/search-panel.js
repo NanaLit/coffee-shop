@@ -19,16 +19,18 @@ class SeachPanel extends Component {
     }
 
     render () {
+        const {filter, onFilterSelect} = this.props;
+
         const buttonsData = [
             {text: "Brasil", color: true, left: true, right: false, id: 1},
-            {text: "Kenya", color: true, left: false, right: false, id: 2},
+            {text: "Keniya", color: true, left: false, right: false, id: 2},
             {text: "Columbia", color: true, left: false, right: true, id: 3},
         ];
     
         const buttons = buttonsData.map((item, i) => {
             return (
                 <div key={i}>
-                    <Button {...item}/>
+                    <Button filter={filter} {...item} onFilterSelect={onFilterSelect}/>
                 </div>
             )
         });

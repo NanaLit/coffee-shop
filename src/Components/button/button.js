@@ -1,6 +1,7 @@
 import './button.scss';
 
-function Button ({text, color, right, left, id}) {
+function Button ({text, color, right, left, filter, onFilterSelect}) {
+    const active = filter === text;
 
     let clazz = "btn"
     if (color) {
@@ -13,11 +14,16 @@ function Button ({text, color, right, left, id}) {
 
     if (left) {
         clazz += " btn_left"
+    } 
+
+    if(active) {
+        clazz += ' btn_active'
     }
 
     return (
         <button className={clazz}
-            type="button">
+            type="button"
+            onClick={() => onFilterSelect(text)}>
             {text}
         </button>
     )

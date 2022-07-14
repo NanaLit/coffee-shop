@@ -7,12 +7,14 @@ import GoodsList from '../goods-list/goods-list';
 
 class FilterGoods extends Component {
     render() {
-        const {data} = this.props;
+        const {data, onUpdateSearch, filter,onFilterSelect} = this.props;
         return (
             <div className="filter">
                 <div className="container">
                     <SeachPanel
-                        onUpdateSearch={this.props.onUpdateSearch}/>
+                        onUpdateSearch={onUpdateSearch}
+                        filter={filter}
+                        onFilterSelect={onFilterSelect}/>
                     <GoodsList data={data}/>
                 </div>
             </div>
