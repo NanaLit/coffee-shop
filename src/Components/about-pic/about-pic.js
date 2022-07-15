@@ -12,7 +12,6 @@ function AboutPic ({beans}) {
     beans ? (img = bea) : (img = goods);
     
     return (
-        
         <section className="picture">
             <div className="container">
                 <div className="picture__wrapper">
