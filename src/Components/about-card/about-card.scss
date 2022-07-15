@@ -1,0 +1,39 @@
+.coffeecard {
+    padding: 4.375rem 0 2rem;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        gap: 3.5rem;
+    }
+    &__img {
+        width: 392px;
+        height: auto;
+        display: block;
+    }
+    &__unvisible {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .coffeecard {
+        padding: 2rem 0 1rem;
+        &__wrapper {
+            flex-direction: column;
+            gap: 0;
+            align-items: center;
+        }
+        &__img {
+            display: none;
+        }
+        &__unvisible {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        &__descr {
+            width: 80%;
+        }
+    }
+}

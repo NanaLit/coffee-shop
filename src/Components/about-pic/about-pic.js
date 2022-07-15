@@ -16,9 +16,10 @@ function AboutPic ({beans}) {
             <div className="container">
                 <div className="picture__wrapper">
                     <img src={img} alt="cup-of-coffee" className="picture__img" />
-                    <div className="pucture__descr">
+                    <div className="picture__descr">
                         <HeaderH2 text={"About our beans"} weight={true}/>
                         <Divider color={true}/>
+                        <img src={img} alt="cup-of-coffee" className="picture__unvisible" />
                         <Description 
                             text="Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible."
                             middle={true}/>
