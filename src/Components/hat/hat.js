@@ -36,16 +36,16 @@ class Hat extends Component {
         return (
             <div className="hat">
                 <nav className={header}>
-                    <a href="#" onClick={this.onVisibleMenu}><img className="logo" src={img} alt="logo" /></a>
+                    <a href="#promo-home" onClick={this.onVisibleMenu}><img className="logo" src={img} alt="logo" /></a>
                     <ul className={hatList}>
                         <li className={clazz}>
-                            <a href="#">Coffee house</a>
+                            <a href="#promo-home">Coffee house</a>
                         </li>
                         <li className={clazz}>
-                            <a href="#">Our coffee</a>
+                            <a href="#promo-coffee">Our coffee</a>
                         </li>
                         <li className={clazz}>
-                            <a href="#">For your pleasure</a>
+                            <a href="#promo-pleasure">For your pleasure</a>
                         </li>
                     </ul>
                 </nav>

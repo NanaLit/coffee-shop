@@ -7,7 +7,7 @@ import Button from '../button/button';
 
 function PromoHome () {
     return (
-        <section className="promo">
+        <section className="promo" id="promo-home">
             <Header/>
             <div className="container">
                 <HeaderH1 text="Everything You Love About Coffee"/>
