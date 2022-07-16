@@ -5,6 +5,7 @@ import './App.scss'
 import HomePage from '../Homepage/home-page';
 import OurCoffe from '../OurCoffee/our-coffee';
 import OurCoffeCard from '../OurCoffeeCard/our-coffee-card';
+import Pleasure from '../Pleasure/pleasure';
 
 
 class App extends Component {
@@ -69,6 +70,7 @@ class App extends Component {
                     onFilterSelect={this.onFilterSelect}/>
                 <OurCoffeCard 
                     data={data}/>
+                <Pleasure data={data}/>
             </div>
         )
     }

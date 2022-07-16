@@ -7,7 +7,7 @@ import Footer from '../footer/footer';
 
 function HomePage ({data}) {
     return (
-        <div className="app">
+        <div className="homepage">
             <PromoHome/>
             <AboutUs/>
             <OurBest data={data}/>
