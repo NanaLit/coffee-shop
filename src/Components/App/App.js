@@ -56,7 +56,7 @@ class App extends Component {
     onFilterSelect = (filter) => {
         this.setState({filter});
     }
-
+    // ghjdthbkf
     render () {
         const {data, term, filter} = this.state
         const visibleData = this.filterGoods(this.searchGoods(data, term), filter)
