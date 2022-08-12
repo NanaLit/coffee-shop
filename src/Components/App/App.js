@@ -1,32 +1,28 @@
-import { Component } from 'react';
+import { useState } from 'react';
 
 import './App.scss'
 
 import HomePage from '../Homepage/home-page';
-import OurCoffe from '../OurCoffee/our-coffee';
+import OurCoffe from '../OurCoffee/Our-coffee';
 import OurCoffeCard from '../OurCoffeeCard/our-coffee-card';
 import Pleasure from '../Pleasure/pleasure';
 
 
-class App extends Component {
+function App () {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: [
-                {text: "Colimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 1, best: false, country: "Brasil", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-                {text: "Presto Coffee Beans 1 kg", img: 'photo2.png', price: 15.99, id: 2, best: true, country: "Keniya", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-                {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 3, best: true, country: "Columbia", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-                {text: "Solimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 4, best: false, country: "Brasil", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-                {text: "Presto Coffee Beans 1 kg", img: 'photo2.png', price: 15.99, id: 5, best: true, country: "Keniya", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-                {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 6, best: false, country: "Columbia", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-            ],
-            term: '',
-            filter: ''
-        }
-    }
+    const data = [
+        {text: "Colimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 1, best: false, country: "Brasil", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+        {text: "Presto Coffee Beans 1 kg", img: 'photo2.png', price: 15.99, id: 2, best: true, country: "Keniya", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+        {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 3, best: true, country: "Columbia", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+        {text: "Solimo Coffee Beans 2 kg", img: 'photo1.png', price: 10.73, id: 4, best: false, country: "Brasil", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+        {text: "Presto Coffee Beans 1 kg", img: 'photo2.png', price: 15.99, id: 5, best: true, country: "Keniya", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+        {text: "AROMISTICO Coffee 1 kg", img: 'photo3.jpg', price: 6.99, id: 6, best: false, country: "Columbia", preview: 'preview.jpg', description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+    ];
 
-    searchGoods = (items, term) => {
+    const [term, setTerm] = useState('');
+    const [filter, setFilter] = useState('');
+
+    const searchGoods = (items, term) => {
         if (term.lenght === 0) {
             return items
         }
@@ -36,11 +32,11 @@ class App extends Component {
         })
     }
 
-    onUpdateSearch = (term) => {
-        this.setState({term});
+    const onUpdateSearch = (term) => {
+        setTerm(term);
     }
 
-    filterGoods = (items, filter) => {
+    const filterGoods = (items, filter) => {
         switch (filter) {
             case 'Brasil':
                 return items.filter(item => item.country === "Brasil");
@@ -53,27 +49,25 @@ class App extends Component {
         }
     }
 
-    onFilterSelect = (filter) => {
-        this.setState({filter});
+    const onFilterSelect = (filter) => {
+        setFilter(filter);
     }
-    // ghjdthbkf
-    render () {
-        const {data, term, filter} = this.state
-        const visibleData = this.filterGoods(this.searchGoods(data, term), filter)
-        return (
-            <div className="app">
-                <HomePage data={data}/>
-                <OurCoffe 
-                    data={visibleData}
-                    onUpdateSearch={this.onUpdateSearch}
-                    filter={filter}
-                    onFilterSelect={this.onFilterSelect}/>
-                <OurCoffeCard 
-                    data={data}/>
-                <Pleasure data={data}/>
-            </div>
-        )
-    }
+    
+    const visibleData = filterGoods(searchGoods(data, term), filter)
+    return (
+        <div className="app">
+            <HomePage data={data}/>
+            <OurCoffe 
+                data={visibleData}
+                onUpdateSearch={onUpdateSearch}
+                filter={filter}
+                onFilterSelect={onFilterSelect}/>
+            <OurCoffeCard 
+                data={data}/>
+            <Pleasure data={data}/>
+        </div>
+    )
+    
     
 }
 

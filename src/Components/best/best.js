@@ -1,3 +1,4 @@
+
 import './best.scss';
 import HeaderH2 from '../h2/h2';
 import Card from '../card/card';
@@ -9,7 +10,10 @@ const OurBest = ({data}) => {
     const elements = dataBest.map(item => {
         const {id, ...itemProps} = item;
         return (
-            <Card middle={true} key={id} {...itemProps}/>
+            <Card 
+                middle={true} 
+                key={id} 
+                {...itemProps}/>
         )
     });
     

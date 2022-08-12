@@ -1,7 +1,7 @@
 import './card.scss';
 import Description from '../description/descr';
 
-function Card ({text, middle, img, price, country, filters}) {
+const  Card = ({text, middle, img, price, country, filters}) => {
    let classes ="country";
    let size = "card";
     

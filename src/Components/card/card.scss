@@ -18,6 +18,9 @@
         transform: scale(1.05);
         filter: contrast(150%);
     }
+    &_selected {
+        transform: translateY(-8px);
+    }
     .price {
         align-self: flex-end;
         margin: 10px 0 0;
