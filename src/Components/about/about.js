@@ -4,6 +4,7 @@ import Divider from '../divider/divider';
 import Description from '../description/descr';
 
 function AboutUs () {
+    //push
     return (
         <section className="about">
             <div className="container">
