@@ -1,9 +1,6 @@
-import './pleasure.scss'
-
 import PromoPleasure from '../promo-pleasure/promo-pleasure';
 import AboutPic from '../about-pic/about-pic';
 import GoodsList from '../goods-list/goods-list';
-import Footer from '../footer/footer';
 
 function Pleasure ({data}) {
     return (
@@ -17,7 +14,6 @@ function Pleasure ({data}) {
             met spot shy want. Children me laughing we prospect answered followed. At it went
             is song that held help face." />
             <GoodsList data={data}/>
-            <Footer/>
         </div>
     )
 }

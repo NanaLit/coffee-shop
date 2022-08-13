@@ -2,6 +2,24 @@
     min-height: 100vh;
     background: url('./desk-791178_1920.jpg') center (center/cover) no-repeat;
     padding-top: 3.25rem;
+    button {
+        display: block;
+        margin: 1.125rem auto 0;
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover {
+            filter: drop-shadow(16px 16px 10px black);
+        }
+        a {   
+            text-decoration: none;  
+            color: #fff;
+        }
+    }
 }
 
 @media (max-width: 75em) {

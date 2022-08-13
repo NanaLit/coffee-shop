@@ -1,17 +1,14 @@
-import './home-page.scss';
-
 import PromoHome from '../promo-home/promo-home';
 import AboutUs from '../about/about';
 import OurBest from '../best/best';
-import Footer from '../footer/footer';
 
-function HomePage ({data}) {
+function HomePage ({data, getId}) {
     return (
         <div className="homepage">
             <PromoHome/>
             <AboutUs/>
-            <OurBest data={data}/>
-            <Footer/>
+            <OurBest data={data}
+                getId={getId}/>
         </div>
     )
 }

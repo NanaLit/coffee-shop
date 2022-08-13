@@ -1,11 +1,7 @@
 import { useState } from 'react';
-
-import './App.scss'
-
-import HomePage from '../Homepage/home-page';
-import OurCoffe from '../OurCoffee/Our-coffee';
-import OurCoffeCard from '../OurCoffeeCard/our-coffee-card';
-import Pleasure from '../Pleasure/pleasure';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Page404, HomePage, OurCoffe, Pleasure, CardPreview} from '../pages';
+import Footer from '../footer/footer';
 
 
 function App () {
@@ -52,20 +48,34 @@ function App () {
     const onFilterSelect = (filter) => {
         setFilter(filter);
     }
-    
+
     const visibleData = filterGoods(searchGoods(data, term), filter)
+    const [coffeeId, setCoffeeId] = useState(null)
+    const getId = (id) => {
+        setCoffeeId(id)
+    }
+
     return (
-        <div className="app">
-            <HomePage data={data}/>
-            <OurCoffe 
-                data={visibleData}
-                onUpdateSearch={onUpdateSearch}
-                filter={filter}
-                onFilterSelect={onFilterSelect}/>
-            <OurCoffeCard 
-                data={data}/>
-            <Pleasure data={data}/>
-        </div>
+        <Router>
+            <div className="app">
+                <Routes>
+                    <Route path="/" element={<HomePage data={data} getId={getId}/>}/>
+                    <Route 
+                        path="/ourcoffee" 
+                        element={<OurCoffe 
+                                    data={visibleData}
+                                    onUpdateSearch={onUpdateSearch}
+                                    filter={filter}
+                                    onFilterSelect={onFilterSelect}
+                                    getId={getId}
+                                    />}/>
+                    <Route path="/pleasure" element={<Pleasure data={data}/>}/>
+                    <Route path="/ourcoffee/:coffeeId" element={<CardPreview data={data} id={coffeeId}/>}/>
+                    <Route path="*" element={<Page404/>}/>
+                </Routes>
+                <Footer/>
+            </div>
+        </Router>
     )
     
     

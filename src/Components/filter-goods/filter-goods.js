@@ -6,7 +6,7 @@ import GoodsList from '../goods-list/goods-list';
 
 const FilterGoods = (props) =>{
     
-    const {data, onUpdateSearch, filter,onFilterSelect} = props;
+    const {data, onUpdateSearch, filter, onFilterSelect, getId} = props;
     return (
         <div className="filter">
             <div className="container">
@@ -14,7 +14,9 @@ const FilterGoods = (props) =>{
                     onUpdateSearch={onUpdateSearch}
                     filter={filter}
                     onFilterSelect={onFilterSelect}/>
-                <GoodsList data={data}/>
+                <GoodsList 
+                    data={data}
+                    getId={getId}/>
             </div>
         </div>
     )

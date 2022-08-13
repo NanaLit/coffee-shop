@@ -1,6 +1,7 @@
 
 import {useState} from 'react';
 
+import { NavLink } from 'react-router-dom';
 import './hat.scss';
 import logo from './logo.png';
 import logoBlack from './logo-black.png';
@@ -28,16 +29,16 @@ const Hat = (props) => {
     return (
         <div className="hat">
             <nav className={header}>
-                <a href="#promo-home" onClick={onVisibleMenu}><img className="logo" src={img} alt="logo" /></a>
+                <NavLink to="/" onClick={onVisibleMenu}><img className="logo" src={img} alt="logo" /></NavLink>
                 <ul className={hatList}>
                     <li className={clazz}>
-                        <a href="#promo-home">Coffee house</a>
+                        <NavLink to="/">Coffee house</NavLink>
                     </li>
                     <li className={clazz}>
-                        <a href="#promo-coffee">Our coffee</a>
+                        <NavLink to="/ourcoffee">Our coffee</NavLink>
                     </li>
                     <li className={clazz}>
-                        <a href="#promo-pleasure">For your pleasure</a>
+                        <NavLink to="/pleasure">For your pleasure</NavLink>
                     </li>
                 </ul>
             </nav>

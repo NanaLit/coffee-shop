@@ -1,13 +1,10 @@
-
-import './oue-coffee.scss';
 import PromoCoffee from '../promo-coffee/promo-coffee';
 import AboutPic from '../about-pic/about-pic';
 import FilterGoods from '../filter-goods/filter-goods';
-import Footer from '../footer/footer';
 
 const OurCoffe = (props) => {
 
-    const{data, onUpdateSearch, filter, onFilterSelect} = props;
+    const{data, onUpdateSearch, filter, onFilterSelect, onSelectItem, getId} = props;
     return (
         <div className="our">
             <PromoCoffee/>
@@ -18,11 +15,12 @@ const OurCoffe = (props) => {
             met spot shy want. Children me laughing we prospect answered followed. At it went
             is song that held help face."/>
             <FilterGoods 
+                onSelectItem={onSelectItem}
                 data={data}
                 onUpdateSearch={onUpdateSearch}
                 filter={filter}
-                onFilterSelect={onFilterSelect}/>
-            <Footer/>
+                onFilterSelect={onFilterSelect}
+                getId={getId}/>
         </div>
     )
 }
